@@ -89,5 +89,5 @@ for epoch in range(20):
     acc_hook(sess.run(prediction,feed_dict={x:X_dev}),Y_dev)
     print("=== TEST ===")
     acc_hook(sess.run(prediction,feed_dict={x:X_test}),Y_test)
-    print("----"
+    print("----")
                                                                                 
