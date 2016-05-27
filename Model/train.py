@@ -77,17 +77,17 @@ sess.run(init)
 X_hook, Y_hook = sample_batch(X_train,Y_train,10000)
 feed_hook = {x:X_hook, y:Y_hook}
 feed_dev = {x:X_dev, y:Y_dev}
-for epoch in range(100):
+for epoch in range(20):
     for i in range(25):
         X_batch, Y_batch = sample_batch(X_train,Y_train,10000)
         feed = {x:X_batch, y:Y_batch}
         sess.run(optimizer, feed_dict = feed)
-    print "epoch:",epoch,"train:", sess.run(loss, feed_dict = feed_hook)/10000,"dev:", sess.run(loss, feed_dict = feed_dev)/X_dev.shape[0]
-    print "=== TRAIN ==="
+    print("epoch:",epoch,"train:", sess.run(loss, feed_dict = feed_hook)/10000,"dev:", sess.run(loss, feed_dict = feed_dev)/X_dev.shape[0])
+    print("=== TRAIN ===")
     acc_hook(sess.run(prediction,feed_dict={x:X_hook}),Y_hook)
-    print "=== DEV ==="
+    print("=== DEV ===")
     acc_hook(sess.run(prediction,feed_dict={x:X_dev}),Y_dev)
-    print "=== TEST ==="
+    print("=== TEST ===")
     acc_hook(sess.run(prediction,feed_dict={x:X_test}),Y_test)
-    print
+    print("----"
                                                                                 
