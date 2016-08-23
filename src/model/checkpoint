@@ -1,0 +1,6 @@
+model_checkpoint_path: "hj20.ckpt"
+all_model_checkpoint_paths: "hj16.ckpt"
+all_model_checkpoint_paths: "hj17.ckpt"
+all_model_checkpoint_paths: "hj18.ckpt"
+all_model_checkpoint_paths: "hj19.ckpt"
+all_model_checkpoint_paths: "hj20.ckpt"
